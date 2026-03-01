@@ -17,3 +17,5 @@ jobs:
           api_token: ${{ secrets.NEOCITIES_API_KEY }}
           dist_dir: ./site
           cleanup: true
+          protected_files: |
+            latest.json
