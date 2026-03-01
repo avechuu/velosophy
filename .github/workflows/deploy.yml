@@ -10,11 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Deploy to Neocities
-        uses: bcomnes/deploy-to-neocities@v2
+      - uses: bcomnes/deploy-to-neocities@v2
         with:
-          api_key: ${{ secrets.NEOCITIES_API_KEY }}
+          api_token: ${{ secrets.NEOCITIES_API_KEY }}
+          dist_dir: .
           cleanup: true
