@@ -6,6 +6,19 @@
       "name": "intro.html",
       "type": "file",
       "path": "content/blog/intro.html"
+    },
+    {
+      "name": "sethstory",
+      "type": "folder",
+      "path": "content/blog/sethstory",
+      "children": [
+        {
+          "name": "concept.html",
+          "type": "file",
+          "path": "content/blog/sethstory/concept.html"
+        }
+      ]
+
     }
   ]
 }
