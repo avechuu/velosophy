@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/explorer.css" />
+
+        <title>Blogspace</title>
+    </head>
+    <body>
+        <header>
+            <h1>velosophy.neocities.org /// blogspace</h1>
+        </header>
+
+        <div class="marquee">
+            <div class="marquee-content">
+                We are condemned to be free; it is our burden to choose, yet the abyss of possibility swallows us whole.
+            </div>
+        </div>
+
+        <nav>
+            <a href="blogspace.html" class="nav-btn">Blog</a>
+            <a href="microblog.html" class="nav-btn">Microblog</a>
+            <a href="terminal.html" class="nav-btn">Terminal</a>
+        </nav>
+
+        <div class="layout">
+            <button class="sidebar-toggle">☰ Files</button>
+            <aside class="sidebar">
+                <p class="file-header">Vel Explorer v1.1</p>
+                <ul class="tree">
+                    <li>
+                        <span class="folder">📁 Folder 1</span>
+                        <ul>
+                            <li><span class="file">📄 File 1-1.html</span></li>
+                            <li><span class="file">📄 File 1-2.html</span></li>
+                            <li>
+                                <span class="folder">📁 Subfolder 1-1</span>
+                                <ul>
+                                    <li><span class="file">📄 File 1-1-1.html</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="folder">📁 Folder 2</span>
+                        <ul>
+                            <li><span class="file">📄 File 2-1.html</span></li>
+                        </ul>
+                    </li>
+                    <li><span class="file">📄 File 3.html</span></li>
+                </ul>
+            </aside>
+
+            <main class="content">
+                <div class="breadcrumb"></div>
+                <div class="file-view"></div>
+            </main>
+        </div>
+
+        <footer>
+            <a href="/index.html" class="nav-btn">return</a>
+        </footer>
+
+        <script src="js/blog.js"></script>
+    </body>
+</html>

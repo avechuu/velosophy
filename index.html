@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <title>home</title>
+</head>
+  
+  
+<body>
+  
+  <script>
+    fetch("/partials/sidebar.html")
+      .then(res => res.text())
+      .then(data => {
+      document.getElementById("sidebar").innerHTML = data;
+    });
+  </script>
+  
+  <div class="site-wrapper">
+    <div class="layout">  
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <h1>☆ velosophy.neocities.org ☆</h1>
+      </header>
+
+      <!-- MARQUEE -->
+      <div class="marquee">
+        <div class="marquee-content">
+          MAJOR WORK IN PROGRESS • MAJOR WORK IN PROGRESS • MAJOR WORK IN PROGRESS • MAJOR WORK IN PROGRESS
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div class="container">
+        <!-- LEFT SIDEBAR -->
+        <div id="sidebar"></div>
+
+        <!-- RIGHT CONTENT -->
+        <main class="right">
+          
+          <h1 class="title">★ Salutations Traveler ★</h1>
+          
+          <p>
+            Welcome to <b><i>vel-o-sophy</i></b>, a little corner on the internet
+            that belongs to the webmaster under the name of
+            <a href="pages/webmaster.html">Avery Solace</a>. I've changed how this site looks about
+            a billion times at this point — and that will keep happening!
+          </p>
+          
+          <p>
+            This site has the main purpose of a <i>one-stop-shop</i> of getting to know me, what I
+            like, and where/how to reach me! But I also plan on using it to share my creations! — 
+            nevertheless I hope you enjoy whatever I've made here~!
+          </p>
+          
+          <h2>Site Directory</h2>
+          <hr>
+          <table class="site-directory">
+            <tbody>
+              <tr>
+                <th class="heading" colspan="2">
+                  navigations:
+                </th>
+              </tr>
+              <tr>
+                <th>/ home</th>
+                <td>the page you are currently in</td>
+              </tr>
+              <tr>
+                <th><a href="pages/webmaster.html">/ webmaster</a></th>
+                <td>place for my info + contacts !</td>
+              </tr>
+              <tr>
+                <th><a href="pages/site-updates.html">/ site updates</a></th>
+                <td>place where I log updates of the site</td>
+              </tr>
+            </tbody>
+            
+            <tbody>
+              <tr>
+                <th class="heading" colspan="2">
+                  archives:
+                </th>
+              </tr>
+              <tr>
+                <th><a href="#">/ blogspace</a></th>
+                <td> WORK IN PROGRESS</td>
+              </tr>
+              <tr>
+                <th><a href="#">/ faves</a></th>
+                <td> WORK IN PROGRESS</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="music">
+            <h3>last-fm:</h3>
+            <hr>
+            <div id="lastfm-widget" class="box-simple">
+              <img src="https://lastfm.freetls.fastly.net/i/u/avatar170s/749921c5a4088aacf264f888349f1851.png" id="background" alt="">
+              <div id="widget-content">
+                <div id="cover-art-container"><img src="https://lastfm.freetls.fastly.net/i/u/avatar170s/749921c5a4088aacf264f888349f1851.png" id="cover-art" alt="loading"></div>
+                <div id="widget">
+                  <span id="song">Loading...</span>
+                  <br>
+                  <span id="artist">Load  ing..</span>
+                  <br>
+                  <span id="timestamp">Loading..</span>
+                  <div id="widget-credit">
+                    Latest played song on <a href="https://www.last.fm/user/avechuu" target="_blank">last.fm</a>
+                  </div>
+                </div>
+                <div id="recent-tracks">
+                </div>
+              </div>
+            </div>
+            
+              <script>
+              document.addEventListener("DOMContentLoaded", () => {
+
+                const URL = "/latest.json";
+
+                const art = document.querySelector("#cover-art");
+                const artist = document.querySelector("#artist");
+                const song = document.querySelector("#song");
+                const timestamp = document.querySelector("#timestamp");
+                const recentContainer = document.querySelector("#recent-tracks");
+
+                async function getTrack() {
+                  try {
+                    const res = await fetch(URL + "?t=" + Date.now());
+                    const data = await res.json();
+
+                    if (!data.tracks || !data.tracks.length) return;
+
+                    const current = data.tracks[0];
+
+                    // Main track
+                    song.textContent = current.name;
+                    artist.textContent = current.artist;
+                    art.src = current.image;
+                    art.alt = current.name;
+
+                    if (current.nowPlaying) {
+                      timestamp.textContent = "Listening right now!";
+                      art.classList.add("spinning");
+                    } else {
+                      art.classList.remove("spinning");
+                      if (current.timestamp) {
+                        const time = new Date(current.timestamp * 1000);
+                        timestamp.textContent =
+                          "Listened on " +
+                          time.toLocaleString([], {
+                            month: "numeric",
+                            day: "numeric",
+                            year: "2-digit",
+                            hour: "numeric",
+                            minute: "2-digit"
+                          });
+                      }
+                    }
+
+                    // Render recent tracks
+                    if (recentContainer) {
+                      recentContainer.innerHTML = "";
+
+                      const label = document.createElement("div");
+                      label.className = "recent-label";
+                      label.textContent = "Previously:";
+                      recentContainer.appendChild(label);
+
+                      data.tracks.slice(1, 5).forEach(track => {
+                        const item = document.createElement("div");
+                        item.className = "recent-track";
+                        item.textContent = `${track.artist} — ${track.name}`;
+                        recentContainer.appendChild(item);
+                      });
+                    }
+
+                  } catch (err) {
+                    console.error("Widget error:", err);
+                  }
+                }
+
+                getTrack();
+                setInterval(getTrack, 10000);
+
+              });
+              </script>
+            
+          </div>
+          
+        </main>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>@velosophy 2026 // everyone is entitled to their own sorrows </p>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>

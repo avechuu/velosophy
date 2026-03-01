@@ -1,0 +1,5 @@
+.sub-list {
+    list-style: circle;
+    margin: 0;
+    padding-left: 2rem;
+}

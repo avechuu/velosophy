@@ -1,0 +1,11 @@
+{
+  "name": "root",
+  "type": "folder",
+  "children": [
+    {
+      "name": "intro.html",
+      "type": "file",
+      "path": "content/blog/intro.html"
+    }
+  ]
+}

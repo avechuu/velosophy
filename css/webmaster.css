@@ -1,0 +1,64 @@
+.about-img {
+  float: left;
+  width: 300px;
+  max-width: 100%;
+  height: auto;   
+  margin: 1rem;
+  border: 1px solid var(--border2);
+}
+
+.profile-text {
+  display: block;        
+}
+
+/* tab stuff */
+.tabs {
+  margin-top: 1rem;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.tab-btn {
+  padding: 8px 18px;
+  background: var(--bgmain);
+  border: 1px solid var(--border2);
+  border-bottom: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  transition: background 0.15s ease;
+}
+
+.tab-btn:hover {
+  background: var(--bgsub);
+}
+
+.tab-btn.active {
+  background: var(--text);
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  padding: 1rem;
+  border: 1px solid var(--border2);
+}
+
+.tab-content.active {
+  display: block;
+  content: "";
+  clear: both;
+  min-height: 100px;
+}
+
+@media (max-width: 768px) {
+  .about-img{
+    width: 100wh;
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+}

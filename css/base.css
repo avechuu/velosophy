@@ -1,0 +1,232 @@
+/* =====================================
+   RESET
+===================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #738bb0;
+  --accent: #00aaff;
+  --text: #7a6b5f;
+  --muted: #bfbfbf;
+  --border: #7a6b5f;
+  --border2: #ddd;
+  --favorite: #f0717c;
+  --bgmain: #f5f5f5;
+  --bgsub: #efefef;
+}
+
+/* =====================================
+   FONTS
+===================================== */
+@font-face {
+  font-family: "Ruigslay";
+  src: url("../fonts/Ruigslay.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VT323";
+  src: url("../fonts/VT323-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant";
+  src: url("../fonts/Cormorant-Regular.otf") format("opentype");
+  font-display: swap;
+}
+
+/* =====================================
+   BASE
+===================================== */
+html {
+  background: var(--primary);
+}
+
+body {
+  margin: 0;
+  font-family: "Cormorant", serif;
+  color: var(--text);
+}
+
+.site-wrapper {
+  width: min(90%, 1080px);
+  margin: 0 auto;
+  background: #fff;
+}
+
+.layout,
+.top-header,
+.site-footer {
+  border-inline: 10px solid var(--primary);
+}
+
+.top-header,
+.site-footer {
+  height: 6rem;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-header h1 {
+  margin: 0;
+  font-family: "Ruigslay", serif;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.container {
+  margin: 0;
+  background: var(--primary );
+  display: flex;
+  gap: 20px;
+  justify-content: baseline;
+}
+
+.left {
+  width: 16rem;
+  height: fit-content;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between boxes */
+  top: 0;
+  
+  background: var(--primary);
+  border-radius: 8px;
+}
+
+.right {
+  width: 100vw;
+  height: 100wh;
+  background: white;
+  padding: 1rem;
+  
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.side-box1 {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.side-box2 {
+  background: var(--primary);
+  padding: 1rem;
+  border-radius: 10px;
+  
+  color: white;
+}
+
+.side-footer {
+  text-align: center;
+}
+
+
+/* =====================================
+   TYPOGRAPHY
+===================================== */
+h1, h2, h3 {
+  font-family: "Ruigslay", serif;
+  margin: 0;
+  color: var(--text);
+  font-weight: normal;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; font-weight: 600; }
+h3 { font-size: 1rem; margin-bottom: .5rem; }
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  font-family: "Cormorant", serif;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0;
+}
+
+p {
+  margin: .5rem 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--border);
+  margin: .5rem 0 1rem;
+}
+
+.sub-list {
+  list-style: circle;
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.fav {
+  color: var(--favorite);
+}
+
+.customhr{
+  font-size: 1.1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    border-right: none;
+  }
+
+  .top-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+}

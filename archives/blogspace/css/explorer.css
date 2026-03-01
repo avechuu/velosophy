@@ -1,0 +1,146 @@
+/* ===============================
+   EXPLORER LAYOUT
+================================ */
+.layout {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+.sidebar {
+    width: 250px;
+    border-right: 1px solid #aaa;
+    padding: 1rem;
+    overflow-y: auto;
+    background: var(--bgsub);
+}
+
+.content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+/* ===============================
+   TREE STRUCTURE
+================================ */
+.tree,
+.tree ul {
+    list-style: none;
+    position: relative;
+}
+
+.tree li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.tree li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 100%;
+    border-left: 1px solid #555;
+}
+
+.tree li::after {
+    content: "";
+    position: absolute;
+    top: 1em;
+    left: 0;
+    width: 20px;
+    border-top: 1px solid #555;
+}
+
+.tree li:last-child::before {
+    height: 1em;
+}
+
+/* ===============================
+   FILE / FOLDER
+================================ */
+.file-header {
+    background-color: var(--primary);
+    text-align: center;
+    color: white;
+}
+
+.folder,
+.file {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.folder:hover,
+.file:hover {
+    text-decoration: underline;
+}
+
+.tree ul {
+    display: none;
+    padding-left: 10px;
+}
+
+.folder.open + ul {
+    display: block;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.breadcrumb span {
+    cursor: pointer;
+    color: var(--primary);
+}
+.breadcrumb span:hover {
+    text-decoration: underline;
+}
+/* Active file */
+.file.active {
+    color: var(--accent);
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+
+.sidebar-toggle {
+    display: none;
+    padding: 0.75rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #aaa;
+        display: none;
+    }
+
+    .sidebar.open {
+        display: block;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+}

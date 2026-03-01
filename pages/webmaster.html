@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/webmaster.css">
+  <title>webmaster</title>
+</head>
+
+  
+  
+<body>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".tab-btn");
+      const contents = document.querySelectorAll(".tab-content");
+
+      buttons.forEach(button => {
+        button.addEventListener("click", function () {
+          buttons.forEach(btn => btn.classList.remove("active"));
+          contents.forEach(content => content.classList.remove("active"));
+
+          button.classList.add("active");
+          document.getElementById(button.dataset.tab).classList.add("active");
+        });
+      });
+    });
+  </script>
+  
+  <script>
+    fetch("/partials/sidebar.html")
+      .then(res => res.text())
+      .then(data => {
+      document.getElementById("sidebar").innerHTML = data;
+    });
+  </script>
+  
+  <div class="site-wrapper">
+    <div class="layout">
+
+      <!-- HEADER -->
+      <header class="top-header">
+        <h1>☆ velosophy.neocities.org ☆</h1>
+      </header>
+
+      <!-- MARQUEE -->
+      <div class="marquee">
+        <div class="marquee-content">
+          MAJOR WORK IN PROGRESS • MAJOR WORK IN PROGRESS • MAJOR WORK IN PROGRESS • MAJOR WORK IN PROGRESS
+        </div>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <div class="container">
+
+        <!-- LEFT SIDEBAR -->
+        <div id="sidebar"></div>
+
+        <!-- RIGHT CONTENT -->
+        <main class="right">
+          <div class="title">
+            <h1>★ Webmaster ★</h1>
+          </div>
+          <hr>
+          <img src="../images/sonaprof.png" class="about-img">
+              <div class="profile-text">
+                <p>
+                  For a lack of better words, greetings web-travelers~! My name is <strong>Avery Solace!</strong>
+                  ... well not <b><i>really</i></b> but that's atleast who I go by! <i>(I also go by <strong>Vel</strong> on very rare occasions)</i>
+                </p>
+                <p>
+                  My pronouns are <strong>He/Him</strong> and I am 17 years old! Currently attending highschool as my education,
+                  and my nationality is a <i>mystery...</i>
+                </p>
+                <p>
+                  My hobbies are playing guitar, drums, reading, and impulsively
+                  spending all my money on an item I will only be fatuated by for 2 weeks
+                  and no more.
+                </p>
+                <p>
+                  I am fortunately a very ambitious and curious perseon, but unfortunately I also have <strong>major</strong>
+                  commitment issues, even the fate of this website is still up in the air... though I will
+                  try to be more committed with everything I have!
+                </p>
+                <p>
+                  The image you see is a wonderful doodle of my sona drawn by my friend Jay... or Ivan, Jivan. Idk as her
+                </p>
+              </div>
+          
+          
+          <!-- <div class="tabs">
+
+            <div class="tab-buttons">
+              <button class="tab-btn active" data-tab="about">about</button>
+              <button class="tab-btn" data-tab="contact">contacts</button>
+            </div>
+
+            <div class="tab-content active" id="about">
+
+            </div>
+
+            <div class="tab-content" id="contact">
+              <p>This is the contact section.</p>
+            </div>
+
+          </div> -->
+
+        </main>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>@velosophy 2026 // everyone is entitled to their own sorrows </p>
+      </footer>
+
+    </div>
+  </div>
+  
+</body>
+</html>

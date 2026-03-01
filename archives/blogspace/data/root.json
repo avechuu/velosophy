@@ -1,0 +1,124 @@
+{
+    "type": "folder",
+    "name": "blogspace",
+    "children": [
+        {
+            "type": "folder",
+            "name": "content",
+            "children": [
+                {
+                    "type": "folder",
+                    "name": "blog",
+                    "children": [
+                        {
+                            "type": "file",
+                            "name": "blog.css"
+                        },
+                        {
+                            "type": "file",
+                            "name": "intro.html"
+                        }
+                    ]
+                },
+                {
+                    "type": "folder",
+                    "name": "microblog",
+                    "children": [
+                        {
+                            "type": "file",
+                            "name": "2026-03-01-avechuu.md"
+                        },
+                        {
+                            "type": "file",
+                            "name": "2026-03-01-velosophy.md"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "folder",
+            "name": "css",
+            "children": [
+                {
+                    "type": "file",
+                    "name": "base.css"
+                },
+                {
+                    "type": "file",
+                    "name": "explorer.css"
+                },
+                {
+                    "type": "file",
+                    "name": "microblog.css"
+                },
+                {
+                    "type": "file",
+                    "name": "terminal.css"
+                }
+            ]
+        },
+        {
+            "type": "folder",
+            "name": "data",
+            "children": [
+                {
+                    "type": "file",
+                    "name": "blog.json"
+                },
+                {
+                    "type": "file",
+                    "name": "microblog.json"
+                },
+                {
+                    "type": "file",
+                    "name": "root.json"
+                }
+            ]
+        },
+        {
+            "type": "folder",
+            "name": "images",
+            "children": [
+                {
+                    "type": "file",
+                    "name": "avechuu.jpg"
+                },
+                {
+                    "type": "file",
+                    "name": "velosophy.jpg"
+                }
+            ]
+        },
+        {
+            "type": "folder",
+            "name": "js",
+            "children": [
+                {
+                    "type": "file",
+                    "name": "blog.js"
+                },
+                {
+                    "type": "file",
+                    "name": "microblog.js"
+                },
+                {
+                    "type": "file",
+                    "name": "terminal.js"
+                }
+            ]
+        },
+        {
+            "type": "file",
+            "name": "blogspace.html"
+        },
+        {
+            "type": "file",
+            "name": "microblog.html"
+        },
+        {
+            "type": "file",
+            "name": "terminal.html"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "VT323";
+  src: url("/fonts/VT323-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* file-style.css - template for loaded HTML files */
+
+/* Reset some basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "VT323", serif;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+/* Headings */
+h1 {
+  font-size: 2rem;
+  color: #222;
+  margin: 0;
+}
+h2 {
+  font-size: 1.75rem;
+  color: #333;
+  margin: 0;
+}
+h3 {
+  font-size: 1.5rem;
+  color: #444;
+  margin: 0;
+}
+h4 {
+  font-size: 1.25rem;
+  color: #555;
+  margin: 0;
+}
+h5 {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+h6 {
+  font-size: 0.875rem;
+  color: #777;
+  margin: 0;
+}
+
+/* Paragraphs */
+p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Code blocks */
+pre,
+code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f5f5f5;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #ccc;
+  padding-left: 1rem;
+  color: #666;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}

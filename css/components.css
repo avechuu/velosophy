@@ -1,0 +1,84 @@
+/* =====================================
+   MARQUEE
+===================================== */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 0;
+  font-family: "VT323", serif;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  to { transform: translateX(-100%); }
+}
+
+/* =====================================
+   SIDEBAR STUFF
+===================================== */
+
+
+/* =====================================
+   SITE-DIRECTORY
+===================================== */
+.site-directory {
+  width: 100%;
+  font-family: "VT323", Serif;
+  background: none;
+
+  border-collapse: separate;   /* critical */
+  border-spacing: 4px 4px;       /* row gap */
+}
+
+/* Each row becomes its own “card” */
+.site-directory tr {
+  background: var(--bgmain);
+}
+
+.site-directory th:not(.heaidng),
+.site-directory td {
+  padding: 0.5rem;
+}
+
+/* section heading row */
+.site-directory .heading {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  background: var(--bgmain);
+  padding: 1rem;
+}
+
+/* left column */
+.site-directory th:not(.heading) {
+  width: 220px;
+  text-align: left;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+/* links */
+.site-directory a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.site-directory a:hover {
+  opacity: 0.75;
+}
+
+/* optional: sub-items like `$ sc --faq` */
+.sub {
+  display: block;
+  font-size: 0.9em;
+  margin-top: 6px;
+}
+
+

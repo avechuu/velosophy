@@ -1,0 +1,45 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.page-content {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+}
+
+.terminal-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #00ff88;
+    font-family: "VT323", monospace;
+    padding: 1rem;
+}
+
+#terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.terminal-input-line {
+    display: flex;
+}
+
+.prompt {
+    margin-right: 8px;
+}
+
+#terminal-input {
+    background: transparent;
+    border: none;
+    color: #00ff88;
+    outline: none;
+    flex: 1;
+    font-family: inherit;
+    font-size: 1rem;
+}
