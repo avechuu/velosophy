@@ -33,11 +33,10 @@
   font-family: "VT323", Serif;
   background: none;
 
-  border-collapse: separate;   /* critical */
-  border-spacing: 4px 4px;       /* row gap */
+  border-collapse: separate;
+  border-spacing: 4px 4px;
 }
 
-/* Each row becomes its own “card” */
 .site-directory tr {
   background: var(--bgmain);
 }
@@ -47,7 +46,6 @@
   padding: 0.5rem;
 }
 
-/* section heading row */
 .site-directory .heading {
   text-align: left;
   font-size: 20px;
@@ -56,7 +54,6 @@
   padding: 1rem;
 }
 
-/* left column */
 .site-directory th:not(.heading) {
   width: 220px;
   text-align: left;
@@ -64,7 +61,6 @@
   white-space: nowrap;
 }
 
-/* links */
 .site-directory a {
   color: var(--accent);
   text-decoration: underline;
@@ -74,7 +70,6 @@
   opacity: 0.75;
 }
 
-/* optional: sub-items like `$ sc --faq` */
 .sub {
   display: block;
   font-size: 0.9em;

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/home.css" />
+        <title>site updates</title>
+    </head>
+
+    <body>
+        <script src="js/lastfm.js" defer></script>
+
+        <script>
+            fetch("partials/sidebar.html")
+                .then((res) => res.text())
+                .then((data) => {
+                    document.getElementById("sidebar").innerHTML = data;
+                    console.log("Sidebar injected");
+
+                    if (typeof initLastFM === "function") {
+                        initLastFM();
+                    }
+                });
+        </script>
+
+        <div class="site-wrapper">
+            <div class="layout">
+                <header class="top-header">
+                    <h1>☆ velosophy.neocities.org ☆</h1>
+                </header>
+
+                <div class="marquee">
+                    <div class="marquee-content">
+                        MAJOR WORK IN PROGRESS • MAJOR WORK IN PROGRESS • MAJOR WORK IN PROGRESS • MAJOR WORK IN
+                        PROGRESS
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div id="sidebar"></div>
+
+                    <main class="right">
+                        <h2>Site Updates</h2>
+                        <hr />
+                        <div class="updates">
+                            <ul>
+                                <li>
+                                    <span class="prefix">★ </span><strong>March 1st, 2026 :</strong>
+                                    Major update, added the Blogspace environment.
+                                </li>
+                                <br />
+                                <li>
+                                    <span class="prefix">☆ </span><strong>February 28th, 2026 :</strong>
+                                    Minor update, automated last-fm update and added 4 recent tracks to the widget.
+                                </li>
+                                <br />
+                                <li>
+                                    <span class="prefix">★</span><strong>February 26th, 2026 :</strong>
+                                    A major overhaul to the site's code layout and/or visual layout, major... and I mean
+                                    MAJOR code streamlining. Made it so that sidebar is its own separate HTML file for
+                                    ease of edits, also fragmented CSS files.
+                                    <br />
+                                    <ul class="sub-list">
+                                        <li>
+                                            <strong>Changes :</strong>
+                                            <ul class="sub-list">
+                                                <li>Added plans for blogspace and faves</li>
+                                                <li>Added the <a href="#">site-updates</a> page</li>
+                                                <li>
+                                                    Added last-fm widge, ib:<a
+                                                        href="https://alphacentauri.neocities.org/">
+                                                        alphacentauri</a
+                                                    >
+                                                </li>
+                                                <li>New sidebar style</li>
+                                                <li>Reworked <a href="webmaster.html">webmaster</a></li>
+                                                <li>Reworked <a href="../index.html">home</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <br />
+                                <li>
+                                    <span class="prefix">☆ </span><strong>February 18th, 2026 :</strong>
+                                    Second day of the site's activation, added the webmaster page, a few stamps here and
+                                    there. To-Do List; Log-Box; Font Changes; Code Tidying; etc.
+                                </li>
+                                <br />
+                                <li>
+                                    <span class="prefix">☆ </span><strong>February 17th, 2026 : </strong>
+                                    The day the site was born... reborn...? technically I had a few other versions
+                                    before this one but I didn't really do much with them. I chose the name velosophy
+                                    because it combines Vel and Philosophy... heh I know no need to tell me I'm a genius
+                                </li>
+                            </ul>
+                        </div>
+                    </main>
+                </div>
+
+                <footer class="site-footer">
+                    <p>@avechuu 2026 // everyone is entitled to their own sorrows</p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
