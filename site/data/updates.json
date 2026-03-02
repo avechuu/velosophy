@@ -1,0 +1,38 @@
+[
+  {
+    "date": "2026-03-02",
+    "title": "Patch V3.1.0",
+    "type": "Minor",
+    "notes": "Temporarily disabled the Blogspace environment, a few touch ups here and there across pages. Some directory changes for ease of use, streanmlining of site-updates. + Bugfixes"
+  },
+  {
+    "date": "2026-03-01",
+    "title": "Patch V3.0.0",
+    "type": "Major",
+    "notes": "Major update, added the Blogspace environment."
+  },
+  {
+    "date": "2026-02-28",
+    "title": "Patch V2.0.1",
+    "type": "Patch",
+    "notes": "Minor update, automated last-fm update and added 4 recent tracks to the widget."
+  },
+  {
+    "date": "2026-02-26",
+    "title": "Patch V2.0.0",
+    "type": "Major",
+    "notes": "A major overhaul to the site's code layout and/or visual layout, major... and I mean MAJOR code streamlining. Made it so that sidebar is its own separate HTML file for ease of edits, also fragmented CSS files."
+  },
+  {
+    "date": "2026-02-18",
+    "title": "Patch V1.1.0",
+    "type": "Minor",
+    "notes": "Second day of the site's activation, added the webmaster page, a few stamps here and there. To-Do List; Log-Box; Font Changes; Code Tidying; etc."
+  },
+  {
+    "date": "2026-02-17",
+    "title": "Patch V1.0.0 - Inception",
+    "type": "Major",
+    "notes": "The day the site was born... reborn...? technically I had a few other versions before this one but I didn't really do much with them. I chose the name velosophy because it combines Vel and Philosophy... heh I know no need to tell me I'm a genius"
+  }
+]

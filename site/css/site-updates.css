@@ -1,5 +1,58 @@
-.sub-list {
-    list-style: circle;
-    margin: 0;
-    padding-left: 2rem;
+.log-heading {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.log-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.log-entry {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.log-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.log-meta {
+    font-family: "VT323", serif;
+    color: var(--accent);
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.log-title {
+    font-family: "VT323", serif;
+    font-size: 2rem;
+    margin: 0 0 8px 0;
+}
+
+.log-notes {
+    font-family: "Cormorant", serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.log-type {
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid currentColor;
 }
