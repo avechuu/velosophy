@@ -16,6 +16,7 @@
 }
 
 .content {
+    position: relative; /* so buttons are relative to this container */
     flex: 1;
     padding: 1rem;
     overflow-y: auto;
@@ -102,6 +103,162 @@
 /* Active file */
 .file.active {
     color: var(--accent);
+}
+
+/* ===============================
+   TEXT SIZE BUTTON
+================================ */
+.segmented-btn {
+    position: absolute; /* absolute inside .file-view */
+    top: 10px; /* distance from top of file-view */
+    right: 10px; /* distance from right of file-view */
+    display: inline-flex;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow:
+        0 0 5px var(--neon),
+        0 0 10px var(--neon);
+    z-index: 100;
+    background-color: var(--bgmain);
+}
+
+.segmented-btn button {
+    background-color: var(--bgsub);
+    color: var(--primary);
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.segmented-btn button:not(:last-child) {
+    border-right: 2px solid var(--border2);
+}
+
+.segmented-btn button:hover {
+    background-color: var(--accent);
+    color: white;
+    transform: scale(1.05);
+}
+
+.segmented-btn button:active {
+    background-color: var(--primary);
+    transform: scale(0.95);
+}
+
+/* ===============================
+   FILE CONTENT
+================================ */
+.file-view * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.file-view {
+    font-family: "VT323", serif;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Headings */
+.file-view h1 {
+    font-size: 2rem;
+    color: #222;
+    margin: 0;
+}
+.file-view h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin: 0;
+}
+.file-view h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin: 0;
+}
+.file-view h4 {
+    font-size: 1.25rem;
+    color: #555;
+    margin: 0;
+}
+.file-view h5 {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+}
+.file-view h6 {
+    font-size: 0.875rem;
+    color: #777;
+    margin: 0;
+}
+
+/* Paragraphs */
+.file-view p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Links */
+.file-view a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.file-view a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+.file-view ul,
+.file-view ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.file-view li {
+    margin-bottom: 0.5rem;
+}
+
+/* Code blocks */
+.file-view pre,
+.file-view code {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #f5f5f5;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+/* Blockquotes */
+.file-view blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1rem;
+    color: #666;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+/* Images */
+.file-view img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tables */
+.file-view table {
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.file-view th,
+.file-view td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+}
+.file-view th {
+    background-color: #f2f2f2;
 }
 
 /* ===============================

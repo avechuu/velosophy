@@ -24,19 +24,19 @@
 ================================ */
 @font-face {
   font-family: "Ruigslay";
-  src: url("/fonts/Ruigslay.ttf") format("truetype");
+  src: url("../../../fonts/Ruigslay.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "VT323";
-  src: url("/fonts/VT323-Regular.ttf") format("truetype");
+  src: url("../../../fonts/VT323-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Cormorant";
-  src: url("/fonts/Cormorant-Regular.otf") format("opentype");
+  src: url("../../../fonts/Cormorant-Regular.otf") format("opentype");
   font-display: swap;
 }
 
@@ -87,7 +87,7 @@ nav {
 }
 
 .nav-btn:hover {
-  background: var(--primary);
+  background: var(--accent);
   color: white;
 }
 

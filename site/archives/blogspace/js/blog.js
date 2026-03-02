@@ -100,31 +100,78 @@ function setupGlobalClickHandler() {
   });
 }
 
-/**
- * Load file content into main pane
- */
-async function loadFileContent(path, element) {
-  const contentPane = document.querySelector(".file-view");
+const contentPane = document.querySelector(".file-view");
 
+// Create shadow root once
+const shadow = contentPane.attachShadow({ mode: "open" });
+
+// Store base sizes for all elements
+let baseSizes = new Map();
+let fontScale = 1; // 1 = 100%
+
+async function loadFileContent(path, element) {
   try {
     const res = await fetch(path);
     if (!res.ok) throw new Error("File not found");
 
     const html = await res.text();
 
-    // Clear previous content
-    contentPane.innerHTML = "";
-
-    // Create Shadow DOM
-    const shadow = contentPane.attachShadow({ mode: "open" });
+    // Inject content into shadow root
     shadow.innerHTML = html;
+
+    // Apply file CSS inside shadow root
+    const styleLink = document.createElement("link");
+    styleLink.setAttribute("rel", "stylesheet");
+    styleLink.setAttribute("href", "/file-style.css"); // your template CSS
+    shadow.appendChild(styleLink);
+
+    // Store default computed font sizes
+    baseSizes.clear();
+    const allElements = shadow.querySelectorAll("*");
+    allElements.forEach(el => {
+      const computed = getComputedStyle(el).fontSize;
+      baseSizes.set(el, parseFloat(computed));
+    });
+
+    // Reset scale
+    fontScale = 1;
+    updateTextSize();
+
+    // Show buttons
+    const fontButtons = document.getElementById("font-buttons");
+    fontButtons.style.display = "inline-flex";
 
     setActiveFile(element);
     buildBreadcrumb(element);
+
   } catch (error) {
-    contentPane.innerHTML = `<p style="color:red;">Error loading file.</p>`;
+    shadow.innerHTML = `<p style="color:red;">Error loading file.</p>`;
     console.error(error);
   }
+}
+
+// Increase/decrease/reset functions
+function increaseSize() {
+  fontScale += 0.1;
+  updateTextSize();
+}
+
+function decreaseSize() {
+  fontScale -= 0.1;
+  if (fontScale < 0.5) fontScale = 0.5; // min size
+  updateTextSize();
+}
+
+function resetSize() {
+  fontScale = 1;
+  updateTextSize();
+}
+
+// Apply scaling based on baseSizes
+function updateTextSize() {
+  baseSizes.forEach((base, el) => {
+    el.style.fontSize = base * fontScale + "px";
+  });
 }
 
 function setActiveFile(selectedElement) {
