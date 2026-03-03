@@ -1,69 +1,50 @@
-#lastfm-widget {
-  position: relative;
+/* =====================================
+   SITE-DIRECTORY
+===================================== */
+.site-directory {
   width: 100%;
-  border-radius: 12px;
+  font-family: "VT323", Serif;
+  background: none;
 
-  display: flex;
-  flex-direction: column;
+  border-collapse: separate;
+  border-spacing: 4px 4px;
+}
 
-  background: #fff;
+.site-directory tr {
+  background: var(--bgmain);
+}
+
+.site-directory th:not(.heaidng),
+.site-directory td {
+  padding: 0.5rem;
+}
+
+.site-directory .heading {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  background: var(--bgmain);
   padding: 1rem;
-
-  overflow: hidden;
-  font-family: "Inter", sans-serif;
 }
 
-#widget-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+.site-directory th:not(.heading) {
+  width: 220px;
+  text-align: left;
+  font-weight: normal;
+  white-space: nowrap;
 }
 
-#cover-art {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-  border-radius: 12px;
-}
-
-#widget {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.2rem;
-}
-
-#song {
-  font-family: "VT323", monospace;
-  font-size: 22px;
-  letter-spacing: 1px;
-  color: var(--text);
-}
-
-#artist {
-  font-family: "VT323", monospace;
-  font-size: 14px;
+.site-directory a {
   color: var(--accent);
-}
-
-#timestamp {
-  font-size: 12px;
-  color: #999;
-  margin-top: 0.3rem;
-}
-
-#widget-credit {
-  margin-top: 0.6rem;
-  font-size: 10px;
-  color: #aaa;
-}
-
-#widget-credit a {
-  color: inherit;
-  text-decoration: none;
-}
-
-#widget-credit a:hover {
   text-decoration: underline;
+}
+
+.site-directory a:hover {
+  opacity: 0.75;
+}
+
+.sub {
+  display: block;
+  font-size: 0.9em;
+  margin-top: 6px;
 }

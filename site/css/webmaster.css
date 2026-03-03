@@ -2,17 +2,13 @@
   float: left;
   width: 300px;
   max-width: 100%;
-  height: auto;   
-  margin: 1rem;
+  height: auto;
+  margin-right: 1rem;
   border: 1px solid var(--border2);
 }
 
-.profile-text {
-  display: block;        
-}
-
 @media (max-width: 768px) {
-  .about-img{
+  .about-img {
     width: 100wh;
     float: none;
     display: block;

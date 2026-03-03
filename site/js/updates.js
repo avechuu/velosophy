@@ -7,13 +7,19 @@ fetch("data/updates.json")
             const log = document.createElement("article");
             log.classList.add("log-entry");
 
+            const notesContent = Array.isArray(entry.notes)
+                ? `<ul>${entry.notes.map((note) => `<li>${note}</li>`).join("")}</ul>`
+                : `<p>${entry.notes}</p>`;
+
             log.innerHTML = `
         <div class="log-meta">
           <span class="log-date">${entry.date}</span>
           <span class="log-type">${entry.type}</span>
         </div>
-        <h2 class="log-title">${entry.title}</h2>
-        <p class="log-notes">${entry.notes}</p>
+        <h3 class="log-title">${entry.title}</h2>
+        <div class="log-notes">
+            ${notesContent}
+        </div>
       `;
 
             container.appendChild(log);

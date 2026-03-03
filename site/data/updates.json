@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-03-03",
+    "title": "V3.1.1",
+    "type": "patch",
+    "notes": [
+      "> Changed the site-wide font because I didn't like how Cormorant was wobbly on zoom",
+      "> Changed how h2 looks",
+      "> Updated the webmaster page content",
+      "> Some backend tidying up",
+      "- Removed the 'active ventures' box on the sidebar",
+      "- Removed Averybrine"
+    ]
+  },
+  {
     "date": "2026-03-02",
     "title": "Patch V3.1.0",
     "type": "Minor",

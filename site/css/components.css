@@ -21,59 +21,103 @@
 }
 
 /* =====================================
-   SIDEBAR STUFF
+   LASTFM
 ===================================== */
-
-
-/* =====================================
-   SITE-DIRECTORY
-===================================== */
-.site-directory {
+#lastfm-widget {
+  position: relative;
   width: 100%;
-  font-family: "VT323", Serif;
-  background: none;
+  border-radius: 12px;
 
-  border-collapse: separate;
-  border-spacing: 4px 4px;
-}
+  display: flex;
+  flex-direction: column;
 
-.site-directory tr {
-  background: var(--bgmain);
-}
-
-.site-directory th:not(.heaidng),
-.site-directory td {
-  padding: 0.5rem;
-}
-
-.site-directory .heading {
-  text-align: left;
-  font-size: 20px;
-  font-weight: bold;
-  background: var(--bgmain);
+  background: #fff;
   padding: 1rem;
+
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
 }
 
-.site-directory th:not(.heading) {
-  width: 220px;
-  text-align: left;
-  font-weight: normal;
-  white-space: nowrap;
+#widget-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.site-directory a {
+#cover-art {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+#song {
+  font-family: "VT323", monospace;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+#artist {
+  font-family: "VT323", monospace;
+  font-size: 14px;
   color: var(--accent);
+}
+
+#timestamp {
+  font-size: 12px;
+  color: #999;
+  margin-top: 0.3rem;
+}
+
+#widget-credit {
+  margin-top: 0.6rem;
+  font-size: 10px;
+  color: #aaa;
+}
+
+#widget-credit a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#widget-credit a:hover {
   text-decoration: underline;
 }
 
-.site-directory a:hover {
-  opacity: 0.75;
+/* =====================================
+   SIDEBAR STUFF
+===================================== */
+
+.side-box1 {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
-.sub {
-  display: block;
-  font-size: 0.9em;
-  margin-top: 6px;
+.side-box2 {
+  background: var(--primary);
+  padding: 1rem;
+  border-radius: 10px;
+
+  color: white;
+}
+
+.side-box2 p {
+  font-family: "VT323", serif;
+}
+
+.side-footer {
+  text-align: center;
 }
 
 
