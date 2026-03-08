@@ -1,3 +1,13 @@
+span {
+  margin: 0;
+  font-weight: 600;
+}
+
+ul {
+  margin-top: 5px;
+  list-style-type: none;
+}
+
 .about-img {
   float: left;
   width: 300px;

@@ -11,6 +11,7 @@
 
   <body>
     <script src="js/lastfm.js" defer></script>
+    <script src="https://status.cafe/current-status.js?name=avechuu" defer></script>
 
     <script>
       fetch("partials/sidebar.html")
@@ -29,8 +30,14 @@
       <div class="layout">
         <!-- HEADER -->
         <header class="top-header">
-          <h1>☆ velosophy.neocities.org ☆</h1>
+          <h1 id="header">☆ velosophy.neocities.org ☆</h1>
         </header>
+
+        <script>
+          if (window.matchMedia("(max-width: 768px)").matches) {
+            document.getElementById("header").textContent = "velosophy.neocities.org";
+          }
+        </script>
 
         <!-- MARQUEE -->
         <div class="marquee">
@@ -74,7 +81,7 @@
                 </tr>
                 <tr>
                   <th><a href="webmaster.html">/ webmaster</a></th>
-                  <td>place for my info + contacts (soon) !</td>
+                  <td>a short autobiography (more or less)!</td>
                 </tr>
                 <tr>
                   <th><a href="site-updates.html">/ site updates</a></th>

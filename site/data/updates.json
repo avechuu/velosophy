@@ -1,8 +1,18 @@
 [
   {
+    "date": "2026-03-08",
+    title: "V3.1.2",
+    "type": "Patch",
+    "notes": [
+      "+ Added status.cafe onto the sidebar"
+      "> Update webmaster"
+      "> Backend changes"
+    ]
+  },
+  {
     "date": "2026-03-03",
     "title": "V3.1.1",
-    "type": "patch",
+    "type": "Patch",
     "notes": [
       "> Changed the site-wide font because I didn't like how Cormorant was wobbly on zoom",
       "> Changed how h2 looks",
