@@ -4,9 +4,10 @@
     title: "V3.1.2",
     "type": "Patch",
     "notes": [
-      "+ Added status.cafe onto the sidebar"
-      "> Update webmaster"
-      "> Backend changes"
+      "+ Added status.cafe onto the sidebar",
+      "> Update webmaster",
+      "> Backend changes",
+      "- Removed Averybrine"
     ]
   },
   {

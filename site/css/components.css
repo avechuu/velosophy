@@ -129,17 +129,3 @@
 .side-footer {
   text-align: center;
 }
-
-#statuscafe {
-  padding: 1rem;
-  background-color: white;
-  border-radius: 10px;
-}
-#statuscafe-username {
-  font-size: 15px;
-  margin-bottom: 0.5em;
-  font-family: "VT323", Serif;
-}
-#statuscafe-content {
-  font-size: 15px;
-}
