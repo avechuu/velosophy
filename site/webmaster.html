@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/webmaster.css" />
     <title>webmaster</title>
@@ -12,7 +11,6 @@
 
   <body>
     <script src="js/lastfm.js" defer></script>
-    <script src="https://status.cafe/current-status.js?name=avechuu" defer></script>
 
     <script>
       fetch("partials/sidebar.html")
@@ -24,6 +22,15 @@
           if (typeof initLastFM === "function") {
             initLastFM();
           }
+        });
+    </script>
+
+    <script>
+      fetch("data/status.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const latest = data.statuses[0];
+          document.getElementById("status-text").textContent = latest.text;
         });
     </script>
 
@@ -73,14 +80,26 @@
             <p>
               The image you see is a wonderful doodle of my sona drawn by my friend Jay... or Ivan, Jivan. Idk ask her
             </p>
-            <span>Socials:</span>
+            <span><b>Socials:</b></span>
             <ul>
-              <li>> My <a href="https://www.imdb.com/user/ur189439714/?ref_=ext_shr_lnk" target="_blank">IMDB</a> page to check out what
-              I've watched!</li>
-              <li>> If you'd like to see my music taste come check my <a href="https://open.spotify.com/user/31qpsc2mjza2epimkp3m27deli24?si=262c17de599e42fa" target="_blank">
-                Spotify</a> and <a href="https://www.last.fm/user/avechuu" target="_blank">last.fm</a> out!</li>
-              <li>> I don't use it much but use <a href="https://bsky.app/profile/avechuu.bsky.social" target="_blank">Bluesky</a> if you want to
-              contact me!</li>
+              <li>
+                > My <a href="https://www.imdb.com/user/ur189439714/?ref_=ext_shr_lnk" target="_blank">IMDB</a> page to
+                check out what I've watched!
+              </li>
+              <li>
+                > If you'd like to see my music taste come check my
+                <a
+                  href="https://open.spotify.com/user/31qpsc2mjza2epimkp3m27deli24?si=262c17de599e42fa"
+                  target="_blank">
+                  Spotify</a
+                >
+                and <a href="https://www.last.fm/user/avechuu" target="_blank">last.fm</a> out!
+              </li>
+              <li>
+                > I don't use it much but use
+                <a href="https://bsky.app/profile/avechuu.bsky.social" target="_blank">Bluesky</a> if you want to
+                contact me!
+              </li>
             </ul>
 
             <div class="divider-box"><p>WHAT'S THIS GUY'S DEAL...</p></div>

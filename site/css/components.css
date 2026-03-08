@@ -16,8 +16,6 @@
   animation: scroll 10s linear infinite;
 }
 
-
-
 @keyframes scroll {
   to {
     transform: translateX(-100%);
@@ -128,4 +126,21 @@
 
 .side-footer {
   text-align: center;
+}
+
+#statusbox {
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  font-family: "VT323", monospace;
+  font-size: 1rem;
+}
+
+.status-label {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.status-text {
+  font-size: 15px;
 }

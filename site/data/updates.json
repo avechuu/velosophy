@@ -1,7 +1,18 @@
 [
   {
     "date": "2026-03-08",
-    title: "V3.1.2",
+    "title": "V3.1.3",
+    "type": "Patch",
+    "notes": [
+      "+ Added local based status",
+      "> Backend changes",
+      "- Removed status.cafe embed because it doesn't work for free neocities website and I'm too lazy to figure a solution out",
+      "- Removed Averybrine"
+    ]
+  },
+  {
+    "date": "2026-03-08",
+    "title": "V3.1.2",
     "type": "Patch",
     "notes": [
       "+ Added status.cafe onto the sidebar",
