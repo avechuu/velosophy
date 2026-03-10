@@ -23,15 +23,13 @@
                     if (typeof initLastFM === "function") {
                         initLastFM();
                     }
-                });
-        </script>
 
-        <script>
-            fetch("data/status.json")
-                .then((res) => res.json())
-                .then((data) => {
-                    const latest = data.statuses[0];
-                    document.getElementById("status-text").textContent = latest.text;
+                    fetch("data/status.json")
+                        .then((res) => res.json())
+                        .then((data) => {
+                            const latest = data.statuses[0];
+                            document.getElementById("status-text").textContent = latest.text;
+                        });
                 });
         </script>
 
