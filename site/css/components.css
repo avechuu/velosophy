@@ -28,7 +28,7 @@
 #lastfm-widget {
   position: relative;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
 
   display: flex;
   flex-direction: column;
@@ -51,14 +51,14 @@
   width: 100%;
   max-width: 250px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 #widget {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.2rem;
+  gap: 5px;
 }
 
 #song {
